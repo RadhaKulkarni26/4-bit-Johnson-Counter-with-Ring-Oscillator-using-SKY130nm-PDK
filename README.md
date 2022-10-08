@@ -18,7 +18,7 @@
 
 ### 1. INTRODUCTION
 ***
-In this project, I am going to Design and Implement a **Mixed Signal Circuit of 2:1 Mux**. Design and Implementation will be done using **esim** and **Makerchip** software. Mixed signal circuits contain both **Digital and Analog blocks** of a given circuit. **MUX** is a data selector which will give single output from several data inputs. Here we have implemented 2 input MUX which will give single output based on select line input. As this is a mixed signal circuit we will have complete implementation from **HDL** code to **schematic** implementation and. We can **verify** the **output** using **Circuit Waveforms**. This complete design and implementation is done using VLSI technology which has features such as high speed, low power, low cost, and small size.
+In this project, I am going to Design and Implement a 4-bit Johnson Counter with Ring Oscillator using Verilog HDL and SKY130nm PDK. Design will be implemented using Verilog Code using esim and Makerchip Software. Mixed Signal Circuits contain both  analog and digital part of a circuit. In this design we have  implemented Johnson counter using Verilog code and Ring oscillator using CMOS circuit. As this is a mixed signal circuit, we will have complete implementation from HDL code to schematic implementation and we can verify the output using Circuit Waveforms. This complete design and implementation is done using VLSI technology which has features such as high speed, low power, low cost, and small size. 
 
 ### 2. WHAT ARE MIXED SIGNAL CIRCUITS?
 
@@ -54,7 +54,7 @@ Makerchip provides free and instant access to the latest tools from your browser
 
 ### 5. CIRCUIT DESIGN
 ***
-**Multiplexer (MUX)** is a data selector which will send **single input** data at the **output** based on **select line input**. Here we have implemented a 2:1 MUX which has **2 inputs** (A and B), **1 output** (Y) and **1 select line** (S). Output Y will be **A or B** based on **0 or 1** input at the select line (S). If the select line is **“0”** output Y will be **A** and if the select line is **“1”** then output Y will be **B**. The complete design is divided into two parts **Digital Block** and **Analog Block**. Here, we will be using **Verilog** Hardware Description Language for implementation. We will implement the **code** using **Makerchip** software and implement the Circuit **schematic** using **esim** software. We know that **mixed signals** contain **both** analog and digital blocks hence we need **ADC** and **DAC** blocks to convert the signals from analog to digital. Figure 1 shows the Digital Block of the circuit and Figure 2 shows the Circuit Schematic i.e., Analog Block of the circuit. In the Circuit Waveform, we will verify the above implementation using clock pulse. Output Y will have the same clock pulse sequence as A when S will be “0” and it will have the same clock pulse sequence as B when S will be “1”.
+A Johnson counter is also known as a k‐bit switch‐tail ring counter with 2k decoding gates which provides output for 2k timing signals. A k‐bit ring counter circulates a single bit among the flip‐flops and can provide k distinguishable states. To double the number of states the shift register must be connected as a switch-tail ring counter. In a switch‐tail ring counter we connect the last flip flop to the input of first flip flop as shown in the reference diagrams. The register shifts its contents once to the right with every clock pulse, and at the same time, the complemented value of the E flip‐flop is transferred into the A flip‐ flop. Here, the last inverter’s output is connected to the first inverter’s input through a feedback path. It performs operations in a ring type fashion hence known as Ring oscillator. The number of inverter stages in this oscillator mainly depends on the frequency which we want to generate from this oscillator. Time period of ring oscillator(T)=2*n*Td where Td=Propagation delay of each inverter, Frequency of ring oscillator(f)=1/T and n=Number of inverters.
 
 #### 5.1 REFERENCE CIRCUIT DIAGRAM
 
@@ -293,6 +293,6 @@ In this way we Design and implement a 4-bit Johnson Counter with Ring Oscillator
 
 ### 7. REFERENCES:
 ***
-[1] D. S. D. R. A. Rose V Anugraha. Design and performance analysis of 2:1 multiplexer using multiple logic families at 180nmtechnology.https://ieeexplore.ieee.org/abstract/document/8256918. 
+[1] Stoev, I. I., Borodzhieva, A. N., & Mutkov, V. A. (2018). FPGA Implementation of Johnson Counters Applied in the Educational Process. 2018 IEEE 24th International Symposium for Design and Technology in Electronic Packaging (SIITME). doi:10.1109/siitme.2018.8599274
 
-[2] S. J. Anjum Aara. Design and implementation of cmos and cnt based 2:1 multiplexer at 32nm technology. www.irjet.net.
+[2] V. Sikarwar, N. Yadav and S. Akashe, "Design and analysis of CMOS ring oscillator using 45 nm technology," 2013 3rd IEEE International Advance Computing Conference (IACC), Ghaziabad, 2013, pp. 1491- 149
