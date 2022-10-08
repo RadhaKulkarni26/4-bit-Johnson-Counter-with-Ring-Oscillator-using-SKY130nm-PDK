@@ -75,7 +75,7 @@ A Johnson counter is also known as a k‐bit switch‐tail ring counter with 2k 
 ***
 ## Step-1:
 
-**The Verilog code of 2:1 MUX is as follows:**
+**The Verilog code of Johnson Counter is as follows:**
    
 module Radha_Counter_Module( out,reset,clk);
    
@@ -287,7 +287,7 @@ Now, we simulate the circuit using NgSpice to verify the logic of the circuit.
 
 We will get **waveforms** as follows:
 
-![Final Waveform](https://user-images.githubusercontent.com/70748543/156618361-9c54b4d8-bfdc-45f9-8619-3bf7c09c200b.JPG)
+![Output Waveform](https://user-images.githubusercontent.com/70748543/194714353-d3303efe-0f90-4f33-b346-b8360d4de92c.JPG)
 
 In this way we Design and implement a 4-bit Johnson Counter with Ring Oscillator.
 
